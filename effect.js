@@ -13,7 +13,7 @@ $(window).load(function() {
                 $("p:nth-child(" + i + ")").fadeIn('slow').delay(7000);
                 if (i == 3) {
                     $("p:nth-child(3)").fadeOut('slow').promise().done(function() {
-                        $('#story').fadeIn('slow');
+                        $('#turn_on').fadeIn('slow');
                         $('.message-first').fadeOut('slow');
                     });
                 } else {
