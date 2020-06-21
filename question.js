@@ -204,7 +204,7 @@ $('document').ready(function() {
     });
 
     $('#q3_no').click(function() {
-        $('#!3').fadeOut('slow');
+        $('#Q3').fadeOut('slow');
         sendEmail("không còn tình cảm - không đồng ý");
 
         function msgLoopLing(i, k) {
