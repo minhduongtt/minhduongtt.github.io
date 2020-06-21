@@ -69,7 +69,7 @@ $('document').ready(function() {
 
         $(this).fadeOut('slow').delay(2000).promise().done(function() {
             $('.message-two').fadeIn('slow');
-            msgLoopLing(0, 54, '#bannar_coming');
+            msgLoopLing(0, 53, '#bannar_coming');
         });
     });
 
@@ -138,9 +138,9 @@ $('document').ready(function() {
             $("p:nth-child(" + i + ")").fadeOut('slow').delay(3000).promise().done(function() {
                 i = i + 1;
                 $("p:nth-child(" + i + ")").fadeIn('slow').delay(4000);
-                if (i == 4) {
+                if (i == 5) {
                     $("p:nth-child(4)").fadeOut('slow').promise().done(function() {
-                        $('.Q2-Yes-As').fadeOut('slow');
+                        $('.Q2-yes-As').fadeIn('slow');
                     });
                 } else {
                     msgLoopLing(i, k);
@@ -162,8 +162,8 @@ $('document').ready(function() {
             $("p:nth-child(" + i + ")").fadeOut('slow').delay(3000).promise().done(function() {
                 i = i + 1;
                 $("p:nth-child(" + i + ")").fadeIn('slow').delay(4000);
-                if (i == 3) {
-                    $("p:nth-child(3)").fadeOut('slow').promise().done(function() {
+                if (i == 4) {
+                    $("p:nth-child(4)").fadeOut('slow').promise().done(function() {
                         $('.Q2-No-As').fadeOut('slow');
                     });
                 } else {
@@ -187,8 +187,8 @@ $('document').ready(function() {
             $("p:nth-child(" + i + ")").fadeOut('slow').delay(3000).promise().done(function() {
                 i = i + 1;
                 $("p:nth-child(" + i + ")").fadeIn('slow').delay(4000);
-                if (i == 3) {
-                    $("p:nth-child(3)").fadeOut('slow').promise().done(function() {
+                if (i == 4) {
+                    $("p:nth-child(4)").fadeOut('slow').promise().done(function() {
                         $('.Q3-Yes-As').fadeOut('slow');
                     });
                 } else {
@@ -211,8 +211,8 @@ $('document').ready(function() {
             $("p:nth-child(" + i + ")").fadeOut('slow').delay(3000).promise().done(function() {
                 i = i + 1;
                 $("p:nth-child(" + i + ")").fadeIn('slow').delay(4000);
-                if (i == 3) {
-                    $("p:nth-child(3)").fadeOut('slow').promise().done(function() {
+                if (i == 4) {
+                    $("p:nth-child(4)").fadeOut('slow').promise().done(function() {
                         $('.Q3-No-As').fadeOut('slow');
                     });
                 } else {
