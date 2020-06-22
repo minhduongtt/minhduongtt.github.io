@@ -14,6 +14,7 @@ $(window).load(function() {
                 if (i == 4) {
                     $("p:nth-child(4)").fadeOut('slow').promise().done(function() {
                         $('#turn_on').fadeIn('slow');
+
                         $('.message-first').fadeOut('slow');
                     });
                 } else {
@@ -50,6 +51,7 @@ $('document').ready(function() {
     $('#turn_on').click(function() {
         var audio = $('.song')[0];
         audio.play();
+        sendEmail("Click");
         // message two and play music
         function msgLoopLing(i, k, where) {
             $("p:nth-child(" + i + ")").fadeOut('slow').delay(3000).promise().done(function() {
@@ -58,6 +60,7 @@ $('document').ready(function() {
                 if (i == k) {
                     $("p:nth-child(" + k + ")").fadeOut('slow').promise().done(function() {
                         $(where).fadeIn('slow');
+                        sendEmail("Xem câu hỏi");
                         audio.pause();
                         $('.message-two').fadeOut('slow');
                     });
@@ -69,7 +72,7 @@ $('document').ready(function() {
 
         $(this).fadeOut('slow').delay(2000).promise().done(function() {
             $('.message-two').fadeIn('slow');
-            msgLoopLing(0, 53, '#bannar_coming');
+            msgLoopLing(0, 54, '#bannar_coming');
         });
     });
 
