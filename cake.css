@@ -167,8 +167,7 @@ p {
     text-shadow: 1px 1px 1px rgb(243, 247, 250) !important;
 }
 
-.content p.bye {
-    display: none;
+p.bye {
     font-family: "DancingScript" !important;
     font-size: 65px;
     font-weight: 600;
@@ -178,7 +177,6 @@ p {
     left: 50%;
     top: 300px;
     transform: translate(-50%, -50%);
-    opacity: 0;
     animation: messShow 4s linear;
     color: aliceblue !important;
 }

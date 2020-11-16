@@ -6,21 +6,22 @@ $(window).load(function() {
     // =============   Loading page   ============
     function loadPage() {
         $('.message-first').fadeIn('slow');
-        var i = 0;
+        var i;
 
         function msgLoop(i) {
-            if (i == 5) {
-                $('.bye').css({
-                    display: 'block',
-                    opacity: 1
-                });
-            } else {
-                $("p:nth-child(" + i + ")").fadeOut('slow').delay(2000).promise().done(function() {
-                    i = i + 1;
+            $("p:nth-child(" + i + ")").fadeOut('slow').delay(2000).promise().done(function() {
+                i = i + 1;
+                if (i == 5) {
+                    $("p:nth-child(4)").fadeOut('slow').promise().done(function() {
+                        $('.content2').fadeIn('slow');
+                        $('.bye').fadeIn('slow');
+                    });
+
+                } else {
                     $("p:nth-child(" + i + ")").fadeIn('slow').delay(4000);
                     msgLoop(i);
-                });
-            }
+                }
+            });
             // body...
         }
         msgLoop(0);
