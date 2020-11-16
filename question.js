@@ -6,23 +6,21 @@ $(window).load(function() {
     // =============   Loading page   ============
     function loadPage() {
         $('.message-first').fadeIn('slow');
-        var i;
+        var i = 0;
 
         function msgLoop(i) {
-            $("p:nth-child(" + i + ")").fadeOut('slow').delay(2000).promise().done(function() {
-                i = i + 1;
-                $("p:nth-child(" + i + ")").fadeIn('slow').delay(4000);
-                if (i == 6) {
-                    $('.bye').css({
-                        display: 'block',
-                        opacity: 1
-
-                    });
-                } else {
+            if (i == 5) {
+                $('.bye').css({
+                    display: 'block',
+                    opacity: 1
+                });
+            } else {
+                $("p:nth-child(" + i + ")").fadeOut('slow').delay(2000).promise().done(function() {
+                    i = i + 1;
+                    $("p:nth-child(" + i + ")").fadeIn('slow').delay(4000);
                     msgLoop(i);
-                }
-
-            });
+                });
+            }
             // body...
         }
         msgLoop(0);
