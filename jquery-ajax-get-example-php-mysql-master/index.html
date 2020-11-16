@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>AJAX jQuery Example with PHP MySQL</title>
+    <style type="text/css">
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        
+        .container {
+            width: 50%;
+            margin: 0 auto;
+        }
+        
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid #e3e3e3;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table class="table table-striped">
+        <caption>Population of Districts of Nepal 2013</caption>
+        <thead>
+            <tr>
+                <th>District</th>
+                <th>Male Population</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+        </tbody>
+    </table>
+
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var url = 'aa.php';
+            $.getJSON(url, function(data) {
+                $.each(data, function(index, data) {
+                    $('#tablebody').append('<tr>');
+                    $('#tablebody').append('<td>' + data.ID + '</td>');
+                    $('#tablebody').append('<td>' + data.Name + '</td>');
+                    $('#tablebody').append('</tr>');
+                });
+
+            });
+        });
+    </script>
+</body>
+
+</html>
